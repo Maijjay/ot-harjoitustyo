@@ -1,0 +1,69 @@
+commit cd98f2a8461fd2c90688187413fbc88f10e539a2
+Author: Maijjay <maija.ylitalo95@gmail.com>
+Date:   Tue Mar 17 12:33:26 2020 +0200
+
+    tiedostojen muokkaus ja poisto
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 3fe945c5106d2ed8c7d4ef30929505d8dc87e978
+Author: Maijjay <maija.ylitalo95@gmail.com>
+Date:   Tue Mar 17 12:27:35 2020 +0200
+
+    uuden hakemiston lisäys
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 2b318f485ed8d55419efba8b1e60d56c8318c56d
+Author: Maijjay <maija.ylitalo95@gmail.com>
+Date:   Tue Mar 17 12:08:03 2020 +0200
+
+    uusi lisäys
+
+ stuff/asia.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 7707574c70ab686852ef4630412ad0c40eb8e5ba
+Author: Maijjay <maija.ylitalo95@gmail.com>
+Date:   Tue Mar 17 12:05:30 2020 +0200
+
+    muokkaus
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit df2dd39a2d1183b884891b89e4e5cac526c86f1c
+Author: Maijjay <maija.ylitalo95@gmail.com>
+Date:   Tue Mar 17 11:58:26 2020 +0200
+
+    uusi lisäys
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 1b0b997a147c5d4e600b59606dba9caea99aa2fd
+Author: Maijjay <maija.ylitalo95@gmail.com>
+Date:   Tue Mar 17 11:49:50 2020 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 918593b1f4233b7d78b9eafa9d345544d325c0b0
+Author: Maijjay <maija.ylitalo95@gmail.com>
+Date:   Mon Mar 16 16:19:32 2020 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+Nicos-MacBook-Pro-2:ot_viikko1 maija$ 
+
