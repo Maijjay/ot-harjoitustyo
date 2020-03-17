@@ -7,3 +7,4 @@
   * [Komentorivi.txt](https://github.com/Maijjay/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
 
 Muokataan paikallisesti 
+Epäsynkronoidaan paikallisesti 
