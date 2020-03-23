@@ -7,6 +7,6 @@
   * [Komentorivi.txt](https://github.com/Maijjay/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
 
 * Projekti
-  * [Alustava Määrittelydokumentti](https://github.com/Maijjay/ot-harjoitustyo/blob/master/dokumentointi/alustava%20m%C3%A4%C3%A4rittelydokumentti)
+  * [Alustava Määrittelydokumentti](https://github.com/Maijjay/ot-harjoitustyo/blob/master/dokumentointi/m%C3%A4%C3%A4rittelydokumentti.md)
  
 
