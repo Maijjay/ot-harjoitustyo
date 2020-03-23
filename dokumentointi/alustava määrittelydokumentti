@@ -2,19 +2,19 @@
 
 Sovellus on 2D peli. Pelissä on sankari, joka seikkailee. Sankarin on tarkoitus löytää miekka, ja päihittää pelin pahis.
 
-##Käyttäjät
-Käyttäjäroolina on vain pelaaja
+## Käyttäjät
+* Käyttäjäroolina on vain pelaaja
 
-##Suunnitellut toiminnallisuudet: 
--Hahmonluonti, jossa sankarille voi antaa nimen
--Kartta, jossa on tarkoitus pelata.
--Sankari, joka liikkuu kartalla. 
-	-Ominaisuuksina kuten HP ja lyöntivoima ja kokemustasopisteet.
-	-Inventaario
--Pahiksia, joita voi päihittää
+## Suunnitellut toiminnallisuudet: 
+* Hahmonluonti, jossa sankarille voi antaa nimen
+* Kartta, jossa on tarkoitus pelata.
+* Sankari, joka liikkuu kartalla. 
+	* Ominaisuuksina kuten HP ja lyöntivoima ja kokemustasopisteet.
+	* Inventaario
+* Pahiksia, joita voi päihittää
 
-##Jatkokehitysideoita (tehdään ajan salliessa)
--Random generoidut esineet, mitä putoaa kun päihittää monsterin
--Peliin lisätty kauppa, missä sankari voi ostaa ja myydä tavaroita
--Graafisen käyttöliittymän parantelu
+## Jatkokehitysideoita (tehdään ajan salliessa)
+* Random generoidut esineet, mitä putoaa kun päihittää monsterin
+* Peliin lisätty kauppa, missä sankari voi ostaa ja myydä tavaroita
+* Graafisen käyttöliittymän parantelu
 
