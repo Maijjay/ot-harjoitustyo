@@ -12,6 +12,7 @@ Sovellus on 2D peli. Pelissä on sankari, joka seikkailee. Sankarin on tarkoitus
 	* Ominaisuuksina kuten HP ja lyöntivoima ja kokemustasopisteet.
 	* Inventaario
 * Pahiksia, joita voi päihittää
+* Tallennusominaisuus
 
 ## Jatkokehitysideoita (tehdään ajan salliessa)
 * Random generoidut esineet, mitä putoaa kun päihittää monsterin
