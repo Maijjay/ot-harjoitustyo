@@ -1,9 +1,6 @@
 import com.mycompany.unicafe.Kassapaate;
 import com.mycompany.unicafe.Maksukortti;
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
