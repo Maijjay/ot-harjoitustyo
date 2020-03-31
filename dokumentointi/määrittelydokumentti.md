@@ -1,21 +1,23 @@
-# Yksinkertainen 2D Zelda-peli
+# Laivanupotus
 
-Sovellus on 2D peli. Pelissä on sankari, joka seikkailee. Sankarin on tarkoitus löytää miekka, ja päihittää pelin pahis.
+Kyseessä siis perinteinen laivanupotus -peli. 
 
 ## Käyttäjät
-* Käyttäjäroolina on vain pelaaja
+* Pelissä on kaksi pelaajaa, jotka pelaavat samalta tietokoneelta.
 
 ## Suunnitellut toiminnallisuudet: 
-* Hahmonluonti, jossa sankarille voi antaa nimen
-* Kartta, jossa on tarkoitus pelata.
-* Sankari, joka liikkuu kartalla. 
-	* Ominaisuuksina kuten HP ja lyöntivoima ja kokemustasopisteet.
-	* Inventaario
-* Pahiksia, joita voi päihittää
-* Tallennusominaisuus
+* Laivoja on nejä eri kokoa (ruudokolla 1x1, 2x1, 3x1 ja 4x1)
+* Pelin alussa pelaajilla on mahdollisuus asettaa laivat kentälle haluamallaan tavalla
+	* Laivoja voi kääntää pysty- ja vaakasuoraan
+	* Laivat eivät voi olla päällekkäin, eikä koskea toisiinsa
+* Molemmilla pelaajilla on oma pelilauta, jossa on tarkoitus pelata
+* Vuorollaan pelaajat valitsevat koordinaatin mihin halutaan osua
+	* Jos tulee osuma, pelaaja saa uuden vuoron
+
 
 ## Jatkokehitysideoita (tehdään ajan salliessa)
-* Random generoidut esineet, mitä putoaa kun päihittää monsterin
-* Peliin lisätty kauppa, missä sankari voi ostaa ja myydä tavaroita
+* Pelaajajille mahdollisuus valita pelilaudan koko ja laivojen määrä
+* Pelaajan mahdollisuus antaa itselleen nimi
+* Voittojen määrään perustuva highscore lista
 * Graafisen käyttöliittymän parantelu
 
