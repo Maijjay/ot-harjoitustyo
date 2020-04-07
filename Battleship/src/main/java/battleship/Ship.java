@@ -1,14 +1,34 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package battleship;
 
-/**
- *
- * @author maija
- */
 public class Ship {
-    
+
+    int x;
+    int y;
+    int size;
+    boolean horizontal;
+    int health;
+    boolean isAlive;
+
+    public Ship(int x, int y, int size, boolean horizontal) {
+        this.x = x;
+        this.y = y;
+        this.size = size;
+        this.horizontal = horizontal;
+        this.health = size;
+        this.isAlive = true;
+    }
+
+    public void hit() {
+        if (health > 0) {
+            this.health = this.health -1;
+        }
+        if (health == 0) {
+            sink();
+        }
+    }
+
+    public boolean sink() {
+        return this.isAlive = false;
+    }
+
 }
