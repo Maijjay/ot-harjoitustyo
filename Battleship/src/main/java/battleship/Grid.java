@@ -7,15 +7,12 @@ import javafx.scene.layout.GridPane;
 public class Grid {
 
     private GridPane layout;
-    private int width;
-    private int height;
     ArrayList<Ship> p1Ships;
 
     GameState state;
 
     public Grid() {
-        this.width = 10;
-        this.height = 10;
+       
         this.p1Ships = new ArrayList<>();
         this.initializeShipsList();
         layout = new GridPane();
@@ -37,8 +34,8 @@ public class Grid {
         layout.setVgap(2);
         layout.setMinSize(200, 200);
 
-        for (int x = 0; x < width; x++) {
-            for (int y = 0; y < height; y++) {
+        for (int x = 0; x < state.getWidth(); x++) {
+            for (int y = 0; y < state.getHeight(); y++) {
                 Cell cell = new Cell(x, y, state);
                 state.grid[x][y] = cell;
                 layout.add(cell, x, y);
@@ -47,10 +44,6 @@ public class Grid {
         this.setShip();
         return layout;
     }
-
-//    public void killShip(Ship ship) {
-//
-//    }
 
     public void setShip() {
         for (Ship ship : p1Ships) {
@@ -65,4 +58,12 @@ public class Grid {
             }
         }
     }
+
+    //    public void killShip(Ship ship) {
+    //
+    //    }
+
+    
+    
+    
 }

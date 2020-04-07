@@ -6,9 +6,13 @@ public class GameState {
 
     Cell[][] grid;
     int currentPlayer;
+    int height;
+    int width;
 
     public GameState() {
-        this.grid = new Cell[10][10];
+        this.width = 10;
+        this.height = 10;
+        this.grid = new Cell[this.width][this.height];
         this.determineFirstTurn();
     }
 
@@ -23,6 +27,11 @@ public class GameState {
     }
 
     public void changeTurn() {
+        for (Cell[] c : grid) {
+            for (Cell t : c) {
+                t.render();
+            }
+        }
         if (this.currentPlayer == 1) {
             this.currentPlayer = 2;
         } else {
@@ -35,9 +44,16 @@ public class GameState {
         }
 
     }
+    
+    public int getWidth() {
+        return width;
+    }
 
-//    public void win() {
-//
-//    }
-
+    public int getHeight() {
+        return height;
+    }
+    
+    public int getCurrentPlayer() {
+        return currentPlayer;
+    }
 }

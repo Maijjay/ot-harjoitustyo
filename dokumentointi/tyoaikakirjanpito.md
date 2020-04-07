@@ -7,4 +7,4 @@
 * 03.04.2020 12-16.50 Jatkoin perustoimintojen parissa. Työstin yksittäistä ruudukon solua joka nyt tietää onko ruudussa laiva ja onko siihen osuttu. Ruukukko myös kertoo osuiko vai ei.
 * 03.04.2020 18-22 Jatkoin perustoimintojen parissa. Sain napeille paremman koon. peli tietää onko jokin tietty laiva uponnut.
 * 06.04.2020 21-01 Pelissä on nyt kaksi pelaajaa ja vuorot vaihtuu oikein. Ruudukon näkyvyys myös vaihtuu vuoronvaihtuessa eli sain renderöinnin toimimaan. 
-07.04 18-19 Sain Checkstylen toimimaan ja siistin koodia. Tarkoitus on refaktoroida muutamasta metodisita vielä lyhyempiä.
+07.04 18-19 Sain Checkstylen toimimaan ja siistin koodia. Tarkoitus on refaktoroida koodia ja tehdä siitä selkeämpi, jotta testienkin kirjoittaminen olisi selkeämpää.
