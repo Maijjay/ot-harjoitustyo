@@ -13,7 +13,7 @@ Laivanupotus on kahden pelaajan strateginen arvauspeli, missä on tarkoitus upot
  
  ### Komentorivillä suorittettavat komennot
  
- ## Testien suorittaminen
+ #### Testien suorittaminen
   * Testien suoritus komennolla: mvn test
   * Testikattavuusraportti luodaan komennolla: mvn jacoco:report (raporttia voi tarkastella selaimella ja se löytyy: target/site/jacoco/index.html)
   
