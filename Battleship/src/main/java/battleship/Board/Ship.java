@@ -9,7 +9,7 @@ public final class Ship {
     int size;
     int health;
     boolean horizontal;
-    
+
     boolean isAlive;
     ArrayList<int[]> coordinates;
 
@@ -45,7 +45,7 @@ public final class Ship {
     }
 
     public void hit() {
-        
+
         if (health > 0) {
             this.health = this.health - 1;
         }
@@ -74,24 +74,17 @@ public final class Ship {
     public int getHealth() {
         return health;
     }
-    
-    public boolean getHorizontal(){
+
+    public boolean getHorizontal() {
         return horizontal;
     }
 
-    public boolean getIsAlive(){
+    public boolean getIsAlive() {
         return isAlive;
     }
-    
+
     public ArrayList<int[]> getCoordinates() {
         return coordinates;
     }
-
-  
-    
-    
-    
-    
-    
 
 }

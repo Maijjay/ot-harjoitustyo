@@ -2,7 +2,7 @@ package battleship.Board;
 
 import java.util.ArrayList;
 
-public class Grid {
+public final class Grid {
 
     private String[][] grid;
     private ArrayList<Ship> ships;
