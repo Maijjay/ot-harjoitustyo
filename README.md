@@ -11,14 +11,14 @@ Laivanupotus on kahden pelaajan strateginen arvauspeli, missä on tarkoitus upot
 ### Releaset
  * [Viikko 5](https://github.com/Maijjay/ot-harjoitustyo/releases/tag/viikko5)
  
- ### Komentorivillä suorittettavat komennot
+### Komentorivillä suorittettavat komennot
  
- #### Testien suorittaminen
-  * Testien suoritus komennolla: mvn test
-  * Testikattavuusraportti luodaan komennolla: mvn jacoco:report (raporttia voi tarkastella selaimella ja se löytyy: target/site/jacoco/index.html)
+  #### Testien suorittaminen
+   * Testien suoritus komennolla: mvn test
+   * Testikattavuusraportti luodaan komennolla: mvn jacoco:report (raporttia voi tarkastella selaimella ja se löytyy: target/site/jacoco/index.html)
   
- ### Checkstyle
-  *  mvn jxr:jxr checkstyle:checkstyle (raporttia voi tarkastella selaimella ja se löytyy: target/site/checkstyle.html)
+  #### Checkstyle
+   *  mvn jxr:jxr checkstyle:checkstyle (raporttia voi tarkastella selaimella ja se löytyy: target/site/checkstyle.html)
 
   
   
