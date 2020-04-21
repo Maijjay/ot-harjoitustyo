@@ -1,4 +1,4 @@
-#Laivanupotus
+# Laivanupotus
 
 Laivanupotus on kahden pelaajan strateginen arvauspeli, missä on tarkoitus upottaa vastustajan laivat. Ohjelma arpoo pelin käynnistäessä kumpi pelaaja aloittaa. Pelaajat asettavat laivansa omille ruudukoilleen ja sen jälkeen arvaavat vuorotellen toisen pelaajan laudalta koordinaatteja, tarkoituksena osua vastustajan laivoihin. Pelin voittaa se pelaaja, joka on ensimmäisenä upottanut vastustajan kaikki laivat. 
  
@@ -16,5 +16,9 @@ Laivanupotus on kahden pelaajan strateginen arvauspeli, missä on tarkoitus upot
  #### Testien suorittaminen
   * Testien suoritus komennolla: mvn test
   * Testikattavuusraportti luodaan komennolla: mvn jacoco:report (raporttia voi tarkastella selaimella ja se löytyy: target/site/jacoco/index.html)
+  
+ ### Checkstyle
+  *  mvn jxr:jxr checkstyle:checkstyle (raporttia voi tarkastella selaimella ja se löytyy: target/site/checkstyle.html)
+
   
   
