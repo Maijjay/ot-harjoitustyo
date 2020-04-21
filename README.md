@@ -12,13 +12,21 @@ Laivanupotus on kahden pelaajan strateginen arvauspeli, missä on tarkoitus upot
  * [Viikko 5](https://github.com/Maijjay/ot-harjoitustyo/releases/tag/viikko5)
  
 ### Komentorivillä suorittettavat komennot
+  
+  #### Jar tiedoston generointi
+   * Ohjelmasta voidaan tehdä .jar tiedosto komennolla: mvn package
+   
+  #### Ohjelman suorittaminen
+   * Ohjelma voidaan suorittaa komennolla: java -jar Battleship.jar
  
   #### Testien suorittaminen
    * Testien suoritus komennolla: mvn test
-   * Testikattavuusraportti luodaan komennolla: mvn jacoco:report (raporttia voi tarkastella selaimella ja se löytyy: target/site/jacoco/index.html)
+   * Testikattavuusraportti luodaan komennolla: mvn jacoco:report 
+   (raporttia voi tarkastella selaimella ja se löytyy: target/site/jacoco/index.html)
   
   #### Checkstyle
-   * Checkstyleraportti luodaan komennolla: mvn jxr:jxr checkstyle:checkstyle (raporttia voi tarkastella selaimella ja se löytyy: target/site/checkstyle.html)
+   * Checkstyleraportti luodaan komennolla: mvn jxr:jxr checkstyle:checkstyle 
+   (raporttia voi tarkastella selaimella ja se löytyy: target/site/checkstyle.html)
 
   
   
