@@ -1,7 +1,7 @@
 **Arkkitehtuurikuvaus**
 
 *Rakenne*
-<img src = "dokumentointi/kuvat/Battleship package diagram.png">
+<img src = "https://github.com/Maijjay/ot-harjoitustyo/blob/master/dokumentointi/kuvat/Battleship%20package%20diagram.png">
 
 *Käyttöliittymä*
 
