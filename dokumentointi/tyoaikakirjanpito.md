@@ -9,6 +9,6 @@
 * 06.04.2020 21-01 Pelissä on nyt kaksi pelaajaa ja vuorot vaihtuu oikein. Ruudukon näkyvyys myös vaihtuu vuoronvaihtuessa eli sain renderöinnin toimimaan. 
 07.04 18-19 Sain Checkstylen toimimaan ja siistin koodia. Tarkoitus on refaktoroida koodia ja tehdä siitä selkeämpi, jotta testienkin kirjoittaminen olisi selkeämpää.
 20.04 14-19 ja 20-00 Refaktoroin käytännössä koko koodin alusta ja lajittelin luokat erillisiin packageihin. Peli itse eteni siinä määrin, että pelin voi pelata kokonaisuudessaan alusta loppuun. Kirjoitin myös testejä. Tein pelille tekstikäyttöliittymän ja poistin toistaiseksi graafisen käyttöliittymän kokonaan. Tarkoitus on työstää sitä uudelleen sitten kun itse peli toimii kokonaisuudessaan. 
-21.04 13--- Olen työskennellyt dokumentaation parissa.
+21.04 13-20 Täydensin dokumentaatiota ja siistin repoa. Parantelin koodia ja korjasin laivojen asettelua, niin, että laivat eivät voi mennä yli ruudukon, eikä päällekkäin. Lisäsin tekstikäyttöliittymään pelin ohjeet. Pelaaja ei voi myöskään enää arvata samaa kohtaa kahdesti. Pelin pitäisi nyt suurinpiirtein toimia alusta loppuun oikein ja sitä voi myös pelata terminaalista. Pelistä voi luoda jarin ja ensimmäinen release on tehty.
 
-### Tunteja käytetty yhteensä noin 34 
+### Tunteja käytetty yhteensä noin 41 
