@@ -11,4 +11,4 @@
 20.04 14-19 ja 20-00 Refaktoroin käytännössä koko koodin alusta ja lajittelin luokat erillisiin packageihin. Peli itse eteni siinä määrin, että pelin voi pelata kokonaisuudessaan alusta loppuun. Kirjoitin myös testejä. Tein pelille tekstikäyttöliittymän ja poistin toistaiseksi graafisen käyttöliittymän kokonaan. Tarkoitus on työstää sitä uudelleen sitten kun itse peli toimii kokonaisuudessaan. 
 21.04 13--- Olen työskennellyt dokumentaation parissa.
 
-# Tunteja käytetty yhteensä noin 34 
+### Tunteja käytetty yhteensä noin 34 
