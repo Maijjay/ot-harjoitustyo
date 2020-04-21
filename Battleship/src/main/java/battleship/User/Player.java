@@ -6,26 +6,38 @@ import java.util.Scanner;
 public class Player {
 
    private Grid grid;
+  
    Scanner s;
-
+   int shipSize;
     public Player() {
         s = new Scanner(System.in);
+        this.shipSize = 1;
         this.grid = new Grid(10, 10);
         
    }
 
     public void initializeShips() {
 
-        System.out.println("Insert 10 ships. Input: x y horizontal. Example: 1 2 true");
-        for (int i = 0; i < 10 ; i++){
+        System.out.println("\nInsert ship. Input: x y horizontal. Example: 1 2 true");
+ 
         String ship = s.nextLine();
         String[] split = ship.split(" ");
         int x = Integer.parseInt(split[0]);
         int y = Integer.parseInt(split[1]);
-        int size = Integer.parseInt(split[2]);
-        boolean horizontal = Boolean.parseBoolean(split[3]);
-        grid.addShip(x, y, size, horizontal);
-    }
+        boolean horizontal = Boolean.parseBoolean(split[2]);
+        if (grid.addShip(x, y, shipSize, horizontal) == true){
+            System.out.println("Ship added");
+            this.shipSize ++;
+            if(this.shipSize <= 4){
+                this.initializeShips();
+            }
+        } else {
+            System.out.println("\n-- Ship you tried to insert is over grid or there is already a ship. Try again. --\n");
+            this.initializeShips();
+        }
+        
+       
+    
     }
     
     public boolean hit(){

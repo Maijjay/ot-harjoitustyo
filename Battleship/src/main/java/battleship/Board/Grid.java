@@ -23,9 +23,28 @@ public class Grid {
 
     }
 
-    public void addShip(int x, int y, int size, boolean horizontal) {
-        ships.add(new Ship(x, y, size, horizontal));
-        shipsLeft++;
+    public boolean addShip(int x, int y, int size, boolean horizontal) {
+        if (x >= 0 && x <= 9) {
+            if (y >= 0 && y <= 9) {
+                for (Ship ship : ships) {
+                    for (int[] i : ship.coordinates) {
+                        if (i[0] == x && i[1] == y || i[0] == y && i[1] == x) {
+                            return false;
+                        }
+                    }
+                }
+                if (horizontal == true && size + x < 9) {
+                    ships.add(new Ship(x, y, size, horizontal));
+                    shipsLeft++;
+                    return true;
+                } else if (horizontal == false && size + y < 9) {
+                    ships.add(new Ship(x, y, size, horizontal));
+                    shipsLeft++;
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     public void setUpGrid() {
@@ -54,15 +73,6 @@ public class Grid {
         return shipsLeft;
     }
 
-//    public boolean isHit(int x, int y) {
-//        for (int[] i : this.hitCoordinates) {
-//            if (i[0] == x && i[1] == y || i[0] == y && i[1] == x) {
-//                System.out.println("Coordinate is already hit");
-//                return true;
-//            }
-//        }
-//        this.hitCoordinates.add(new int[2])[0] = 1;
-//    }
     public boolean isSquareHit(int x, int y) {
         return this.grid[x][y].equals("_");
     }
@@ -79,7 +89,6 @@ public class Grid {
                         }
                         return true;
                     }
-
                 }
             }
         }

@@ -5,7 +5,7 @@ import battleship.User.Player;
 import java.io.FileNotFoundException;
 import java.util.Random;
 
-public  class State {
+public class State {
 
     int turn;
     int currentPlayer;
@@ -33,24 +33,20 @@ public  class State {
     }
 
     public void firstTurn() {
+        System.out.println("Both players will insert 4 ships to the grid:"
+                + "\n   The ships will be sized 1, 2, 3, and 4. Coordinates x and y represent the ships starting point in the grid. "
+                + "\n   If you want the ship to be in horizontal position insert true and false if in vertical.\n \n");
         if (currentPlayer == 1) {
-            System.out.println("Player 1 set up");
+            System.out.println("Player 1 set up.");
             p1.initializeShips();
-            //p1.getGrid().setShipsInGrid();
-            p1.getGrid().soutGrid();
-            System.out.println("Player 2 set up");
+            System.out.println("Player 2 set up.");
             p2.initializeShips();
-           // p2.getGrid().setShipsInGrid();
-            p2.getGrid().soutGrid();
         } else {
-            System.out.println("Player 2 set up");
+            System.out.println("Player 2 set up.");
             p2.initializeShips();
-           // p2.getGrid().setShipsInGrid();
-            p2.getGrid().soutGrid();
-            System.out.println("Player 1 set up");
+            System.out.println("Player 1 set up.");
             p1.initializeShips();
-          //  p1.getGrid().setShipsInGrid();
-            p1.getGrid().soutGrid();
+
         }
 
     }
@@ -69,24 +65,25 @@ public  class State {
             System.out.println("Player 1's turn");
             boolean newTurn = p2.hit();
             while (newTurn) {
-                newTurn = p2.hit();
                 p2.getGrid().soutGrid();
-                if (p2.getGrid().getShipsLeft() == 0){
+                if (p2.getGrid().getShipsLeft() == 0) {
                     System.out.println("-- Player 1 WINS --");
                     return;
                 }
+                newTurn = p2.hit();
             }
             this.changeTurn();
         } else {
             System.out.println("Player 2's turn");
             boolean newTurn = p1.hit();
             while (newTurn) {
-                newTurn = p1.hit();
                 p1.getGrid().soutGrid();
-                if (p1.getGrid().getShipsLeft() == 0){
+                if (p1.getGrid().getShipsLeft() == 0) {
                     System.out.println("-- Player 2 WINS --");
                     return;
                 }
+                newTurn = p1.hit();
+
             }
             this.changeTurn();
         }
@@ -96,8 +93,6 @@ public  class State {
     public int getCurrentPlayer() {
         return currentPlayer;
     }
-    
-    
 
 }
 //    public void changeTurn() {

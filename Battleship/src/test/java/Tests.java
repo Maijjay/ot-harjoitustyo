@@ -113,15 +113,31 @@ public class Tests {
     public void gridAddsShipsOnList() {
         Grid g = new Grid(10, 10);
         g.addShip(0, 0, 1, true);
-        g.addShip(0, 0, 1, true);
+        g.addShip(2, 2, 1, true);
         assertEquals(2, g.getShips().size());
+    }
+    
+    @Test
+    public void cannotAddOverlappingShips(){
+        Grid g = new Grid(10, 10);
+        g.addShip(0, 0, 1, true);
+        g.addShip(0, 0, 1, true);
+        assertEquals(1, g.getShips().size());
+    }
+    
+    @Test
+    public void cannotInsertShipOverGrid(){
+        Grid g = new Grid(10, 10);
+        g.addShip(0, 0, 13, true);
+        g.addShip(9, 9, 2, true);
+        assertEquals(0, g.getShips().size());
     }
 
     @Test
     public void gridCountsTheAmountOfShips() {
         Grid g = new Grid(10, 10);
         g.addShip(0, 0, 1, true);
-        g.addShip(0, 0, 1, true);
+        g.addShip(4, 4, 1, true);
         assertEquals(2, g.getShipsLeft());
         g.hit(0, 0);
         assertEquals(1, g.getShipsLeft());
