@@ -18,7 +18,7 @@ Laivanupotus on kahden pelaajan strateginen arvauspeli, missä on tarkoitus upot
    * Testikattavuusraportti luodaan komennolla: mvn jacoco:report (raporttia voi tarkastella selaimella ja se löytyy: target/site/jacoco/index.html)
   
   #### Checkstyle
-   *  mvn jxr:jxr checkstyle:checkstyle (raporttia voi tarkastella selaimella ja se löytyy: target/site/checkstyle.html)
+   * Checkstyleraportti luodaan komennolla: mvn jxr:jxr checkstyle:checkstyle (raporttia voi tarkastella selaimella ja se löytyy: target/site/checkstyle.html)
 
   
   
