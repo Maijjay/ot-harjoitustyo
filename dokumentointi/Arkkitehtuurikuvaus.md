@@ -1,7 +1,7 @@
 **Arkkitehtuurikuvaus**
 
 *Rakenne*
-<img scr = "dokumentointi/kuvat/Battleship package diagram.png">
+<img src = "dokumentointi/kuvat/Battleship package diagram.png">
 
 *Käyttöliittymä*
 
