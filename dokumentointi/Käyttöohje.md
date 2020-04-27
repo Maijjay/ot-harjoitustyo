@@ -21,7 +21,7 @@ asetetaan vaakasuoraan ja falsella taas pystysuoraan. Tämän jälkeen tulostuu 
 Insert ship. Input: x y horizontal. Example: 1 2 true. Ships length is 1.
 0 0 true
 Ship added
- 1  _  _  _  _  _  _  _  _  _ 
+´´´ 1  _  _  _  _  _  _  _  _  _ 
  _  _  _  _  _  _  _  _  _  _ 
  _  _  _  _  _  _  _  _  _  _ 
  _  _  _  _  _  _  _  _  _  _ 
