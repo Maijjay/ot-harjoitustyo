@@ -8,7 +8,7 @@
 
 * Ohjelmassa on tekstikäyttöliittymä. Kun pelin käynnistää se kertoo aluksi ohjeet pelin pelaamiseen.
 Pelissä on kaksi pelaajaa ja pelin alussa ohjelma arpoo kumpi pelaaja aloittaa. 
-Pelilauta eli ruudukko on kokoa 10x10, huomattavaa kuitenkin on, että ruuduko alkaa 0:sta ja loppuu 9:ään. Laivat ovat kokoa 1x1, 2x1, 3x1, 4x1 ja 5x1. 
+Pelilauta eli ruudukko on kokoa 10x10, on kuitenkin huomattava, että ruuduko alkaa nollasta ja loppuu yhdeksään. Laivat ovat kokoa 1x1, 2x1, 3x1, 4x1 ja 5x1. 
 
 ## Laivan asettaminen ruudukkoon.
 
@@ -63,7 +63,8 @@ Ship has sunk
 
 ## Pelin voittaminen
 
-* Pelin voittaa kun toinen pelaaja upottaa kaikki toisen pelaajan laivat.
+* Pelin voittaa kun toinen pelaaja upottaa kaikki toisen pelaajan laivat. 
+
 
  
  
