@@ -11,7 +11,6 @@ Kyseessä siis perinteinen laivanupotus -peli.
 	* Laivaa ei voi sijoittaa yli ruudukon						- Tehty
 	* Laivoja voi kääntää pysty- ja vaakasuoraan 					- Tehty
 	* Laivat eivät voi olla päällekkäin 						- Tehty
-	* Laivat eivät voi koskea toisiinsa 
 * Molemmilla pelaajilla on oma pelilauta, jossa on tarkoitus pelata 			- Tehty
 	* Lautaan tulee merkintä kun pelaaja on osunut laivaan tai huti 		- Tehty
 	* Pelaaja ei voi lyödä samaan kohtaan kahdesti 					- Tehty
