@@ -1,8 +1,9 @@
 # Käyttöohje
 
 ### Ohjelman käynnistäminen
-
-* Ohjelma käynnistetään komennolla: java -jar.battleship.
+* Lataa tiedosto ___
+* Ohjelma käynnistetään komennolla: 
+``` java -jar.battleship. ```
 
 ## Yleistä
 
