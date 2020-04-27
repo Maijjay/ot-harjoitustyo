@@ -18,7 +18,8 @@ asetetaan vaakasuoraan ja falsella taas pystysuoraan. Tämän jälkeen tulostuu 
 
 * Esimerkki: Pelaaja 2 laittaa laivan kohtaan [0, 0].
 
-```Insert ship. Input: x y horizontal. Example: 1 2 true. Ships length is 1.
+```
+Insert ship. Input: x y horizontal. Example: 1 2 true. Ships length is 1.
 0 0 true
 Ship added
  1  _  _  _  _  _  _  _  _  _ 
@@ -40,7 +41,7 @@ Ship added
  
  * Esimerkki: Pelaaja 1 ampuu kohtaan [0, 0]
 
-```Player 1's turn
+```
  Player 1's turn
  _  _  _  _  _  _  _  _  _  _ 
  _  _  _  _  _  _  _  _  _  _ 
