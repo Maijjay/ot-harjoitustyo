@@ -6,9 +6,7 @@ import battleship.User.Player;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -106,7 +104,7 @@ public class Tests {
     public void gridHasCorrectWidhtAndHeight() {
         Grid g = new Grid(10, 10);
         assertEquals(10, g.getHeight());
-        assertEquals(10, g.getWidht());
+        assertEquals(10, g.getWidth());
     }
 
     @Test
@@ -116,17 +114,17 @@ public class Tests {
         g.addShip(2, 2, 1, true);
         assertEquals(2, g.getShips().size());
     }
-    
+
     @Test
-    public void cannotAddOverlappingShips(){
+    public void cannotAddOverlappingShips() {
         Grid g = new Grid(10, 10);
         g.addShip(0, 0, 1, true);
         g.addShip(0, 0, 1, true);
         assertEquals(1, g.getShips().size());
     }
-    
+
     @Test
-    public void cannotInsertShipOverGrid(){
+    public void cannotInsertShipOverGrid() {
         Grid g = new Grid(10, 10);
         g.addShip(0, 0, 13, true);
         g.addShip(9, 9, 2, true);
@@ -148,9 +146,45 @@ public class Tests {
         Grid g = new Grid(10, 10);
         assertTrue(g.isSquareHit(0, 0));
         g.hit(0, 0);
-        assertTrue(g.isSquareHit(0, 0));
+        assertFalse(g.isSquareHit(0, 0));
+    }
+
+    @Test
+    public void playerSetsShipCorrectly() {
+        Player p = new Player();
+        p.setShipSize(5);
+        p.setNewShip(0, 0, true);
+        assertTrue(p.getGrid().hit(0, 0));
+    }
+
+    @Test
+    public void playerHitWorks() {
+        Player p = new Player();
+        p.setShipSize(5);
+        p.setNewShip(0, 0, true);
+        assertTrue(p.hit(0, 0));
+    }
+
+    @Test
+    public void stateDetermineFirstTurnWorks() {
+        Player p1 = new Player();
+        Player p2 = new Player();
+        State s = new State(p1, p2);
+        int turn = s.determineFirstTurn();
+        assertTrue(turn == 1 || turn == 2);
+
     }
     
-    
-    
+    @Test
+    public void stateGetTurnWorks(){
+        Player p1 = new Player();
+        Player p2 = new Player();
+        State s = new State(p1, p2);
+        if (s.getCurrentPlayer() == 1){
+            assertEquals("Turn of player 1", s.getTurn());
+        } else {
+            assertEquals("Turn of player 2", s.getTurn());
+        }
+    }
+
 }

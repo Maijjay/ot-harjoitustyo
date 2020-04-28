@@ -2,16 +2,19 @@ package battleship.Board;
 
 import java.util.ArrayList;
 
+/**
+ * Ship represents a single ship that has size, coordinates and information 
+ * if the ship has sunk or not.
+ */
 public final class Ship {
 
-    int x;
-    int y;
-    int size;
-    int health;
-    boolean horizontal;
-
-    boolean isAlive;
-    ArrayList<int[]> coordinates;
+    private final int x;
+    private final int y;
+    private final int size;
+    private int health;
+    private final boolean horizontal;
+    private boolean isAlive;
+    private final ArrayList<int[]> coordinates;
 
     public Ship(int x, int y, int size, boolean horizontal) {
         this.x = x;
@@ -25,6 +28,9 @@ public final class Ship {
 
     }
 
+    /**
+     * Sets all coordinates of the ship to list of arrays.
+     */
     public void setCoordinates() {
 
         for (int i = 0; i < this.size; i++) {
@@ -44,6 +50,9 @@ public final class Ship {
         }
     }
 
+    /**
+     * Decreases ships health by 1 and checks if the ship has sunk.
+     */
     public void hit() {
 
         if (health > 0) {
@@ -55,34 +64,58 @@ public final class Ship {
         }
     }
 
+    /**
+     * @return Has the ship sunk
+     */
     public boolean sink() {
         return this.isAlive = false;
     }
 
+    /**
+     * @return x
+     */
     public int getX() {
         return x;
     }
 
+    /**
+     * @return y
+     */
     public int getY() {
         return y;
     }
 
+    /**
+     * @return Size of the ship (length)
+     */
     public int getSize() {
         return size;
     }
 
+    /**
+     * @return Health of the ship
+     */
     public int getHealth() {
         return health;
     }
 
+    /**
+     * @return True if ship is horizontal
+     */
     public boolean getHorizontal() {
         return horizontal;
     }
 
+    /**
+     * @return Whether the ship is alive
+     */
     public boolean getIsAlive() {
         return isAlive;
     }
 
+    /**
+     * @return List of coordinates
+     */
     public ArrayList<int[]> getCoordinates() {
         return coordinates;
     }

@@ -1,20 +1,21 @@
 package battleship.GameState;
 
-import battleship.UI.GUI;
 import battleship.User.Player;
 import java.io.FileNotFoundException;
 import java.util.Random;
 
-public class State {
+/**
+ * State class keeps track of the state of the game and handles the turns, it
+ * has two players (Player class) and knowledge of the turn.
+ */
+public final class State {
 
-    int turn;
-    int currentPlayer;
-    Player p1;
-    Player p2;
-    GUI gui;
+    private int turn;
+    private int currentPlayer;
+    private final Player p1;
+    private final Player p2;
 
     public State() throws FileNotFoundException {
-        //gui = new GUI();
         this.p1 = new Player();
         this.p2 = new Player();
         this.currentPlayer = this.determineFirstTurn();
@@ -23,6 +24,17 @@ public class State {
 
     }
 
+    public State(Player p1, Player p2) {
+        this.p1 = p1;
+        this.p2 = p2;
+        this.currentPlayer = this.determineFirstTurn();
+    }
+    
+    /**
+     * Determines at random which player starts
+     *
+     * @return 1 if player1 starts ans 2 if player2 starts
+     */
     public int determineFirstTurn() {
         Random r = new Random();
         int number = r.nextInt(2);
@@ -32,6 +44,10 @@ public class State {
         return 2;
     }
 
+    /**
+     * Prints the instructions for inserting ships and calls for method
+     * initializeShips in Players class.
+     */
     public void firstTurn() {
         System.out.println("Both players will insert 4 ships to the grid:"
                 + "\n   The ships will be sized 1, 2, 3, and 4. Coordinates x and y represent the ships starting point in the grid. "
@@ -51,38 +67,53 @@ public class State {
 
     }
 
+    /**
+     * Changes the players turn
+     */
     public void changeTurn() {
         if (this.currentPlayer == 1) {
             this.currentPlayer = 2;
         } else {
             this.currentPlayer = 1;
         }
+        for (int i = 0 ; i < 15 ; i++){
+            System.out.println(" ");
+            
+        }
         turn();
     }
 
+    /**
+     * Handles the turns of the players, prints whose turn it is and keeps their
+     * turn as long as they hit ships, this method uses the Player class hit
+     * method, if player.hit returns false the turn changes.
+     */
     public void turn() {
         if (this.currentPlayer == 1) {
             System.out.println("Player 1's turn");
-            boolean newTurn = p2.hit();
+            p2.getGrid().soutGrid();
+            boolean newTurn = p2.askCoordinatesForTheHit();
             while (newTurn) {
                 p2.getGrid().soutGrid();
                 if (p2.getGrid().getShipsLeft() == 0) {
                     System.out.println("-- Player 1 WINS --");
                     return;
                 }
-                newTurn = p2.hit();
+                newTurn = p2.askCoordinatesForTheHit();
             }
+
             this.changeTurn();
         } else {
             System.out.println("Player 2's turn");
-            boolean newTurn = p1.hit();
+            p1.getGrid().soutGrid();
+            boolean newTurn = p1.askCoordinatesForTheHit();
             while (newTurn) {
                 p1.getGrid().soutGrid();
                 if (p1.getGrid().getShipsLeft() == 0) {
                     System.out.println("-- Player 2 WINS --");
                     return;
                 }
-                newTurn = p1.hit();
+                newTurn = p1.askCoordinatesForTheHit();
 
             }
             this.changeTurn();
@@ -90,87 +121,22 @@ public class State {
 
     }
 
+    /**
+     * @return Number of the current player
+     */
     public int getCurrentPlayer() {
         return currentPlayer;
     }
 
+    /**
+     * @return Prints the turn of the player
+     */
+    public String getTurn() {
+        if (this.currentPlayer == 1) {
+            return "Turn of player 1";
+        } else {
+            return "Turn of player 2";
+        }
+    }
+
 }
-//    public void changeTurn() {
-//        for (Cell[] c : grid) {
-//            for (Cell t : c) {
-//                t.render();
-//            }
-//        }
-//        if (this.currentPlayer == 1) {
-//            this.currentPlayer = 2;
-//        } else {
-//            this.currentPlayer = 1;
-//        }
-//        for (Cell[] c : grid) {
-//            for (Cell t : c) {
-//                t.render();
-//            }
-//        }
-//
-//    }
-//public void turn() {
-//        this.setOnAction((event) -> {
-//            if (this.state.currentPlayer == 1) {
-//                System.out.println("1");
-//                this.p1Hit = true;
-//                if (p1Hit == true && p2Ship != null) {
-//                    p2Ship.hit();
-//                    this.setText("1X");
-//                    if (p2Ship.isAlive == false) {
-//                        this.setText("Sunk");
-//                    }
-//                } else {
-//                    this.setText("1O");
-//                    this.state.changeTurn();
-//                }
-//            } else if (this.state.currentPlayer == 2) {
-//                System.out.println("2");
-//                this.p2Hit = true;
-//                if (p2Hit == true && p1Ship != null) {
-//                    p1Ship.hit();
-//                    this.setText("X");
-//                    if (p1Ship.isAlive == false) {
-//                        this.setText("Sunk");
-//                    }
-//                } else {
-//                    this.setText("O");
-//                    this.state.changeTurn();
-//                }
-//            }
-//        });
-//
-//    }
-//
-//    public void render() {
-//        if (state.currentPlayer == 1) {
-//            if (p2Hit == false) {
-//                this.setText("");
-//            } else if (p2Hit == true && this.p2Ship == null) {
-//                this.setText("O");
-//            } else if (p2Hit == true && this.p2Ship != null) {
-//                this.setText("X");
-//            }
-//        } else if (state.currentPlayer == 2) {
-//            if (p1Hit == false) {
-//                this.setText("");
-//            } else if (p1Hit == true && this.p1Ship == null) {
-//                this.setText("O");
-//            } else if (p1Hit == true && this.p1Ship != null) {
-//                this.setText("X");
-//            }
-//        }
-//    }
-//
-//    public void setShip(Ship s) {
-//        this.setOnAction(event -> {
-//
-//        });
-//
-//        p1Ship = s;
-//        this.setText("S");
-//    }

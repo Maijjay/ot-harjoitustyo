@@ -2,7 +2,9 @@ package battleship;
 
 import battleship.GameState.State;
 import java.io.FileNotFoundException;
-
+/**
+     * Main class of the game, prints starting instructions.
+     */
 public class Main {
 
     public static void main(String[] args) throws FileNotFoundException {
@@ -14,10 +16,9 @@ public class Main {
                 + "\n3. Starting player will insert ships first. "
                 + "\n   -- Please insert stats of the ship strictly as instructed --"
                 + "\n4. The grid is sized 10x10 and coordinates go from [0, 0] to [9, 9]");
-           System.out.println("\n \n");
+        System.out.println("\n \n");
         State s = new State();
-        
-        
+
     }
 
 }
