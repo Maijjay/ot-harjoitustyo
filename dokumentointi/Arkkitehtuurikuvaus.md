@@ -19,6 +19,8 @@ State on vastuussa toiminnallisten kokonaisuuksien suorittamisesta:
 #### Pelin aloitus
 
 <img src = "https://github.com/Maijjay/ot-harjoitustyo/blob/master/dokumentointi/kuvat/LaivojenAsettaminen.png">
+(Sekvenssikaavio kuvastaa metodin firstTurn toimintaa.)
+
 
 Kun peli käynnistetään, luokka State suorittaa metodin determineFirstTurn() ja tämän jälkeen metodin firstTurn(). Oletetaan, että pelaaja1 aloittaa pelin. Tällöin firstTurn() metodi kutsuu ensin pelaajan1 metodia initializeShip(), tämä metodi kysyy pelaajalta syötteet(int x, int y, boolean horizontal) ja kutsuu pelaaja luokan omaa metodia setNewShip(x, y, horizontal) jos pelaajan antamat syötteet olivat oikeanlaiset. Pelaajalla on Grid -olio johon laiva laitetaan. Metodi setNewShip(...) siis kutsuu siis grid.addShip() joka palauttaa true jos laivan asettaminen ruudukkoon onnistui. Jos laivan lisääminen onnistui kasvatetaan pelaaja luokan shipSize -muuttujaa yhdellä. Tämä sykli toistuu niin kauan kun shipSize on 5, eli laivoja on asetettu ruudukkoon onnistuneesti 5 kappaletta. Kun pelaaja1 on asettanut laivansa State luokan metodi firstTurn() suorittaa saman pelaajalle 2.
 
