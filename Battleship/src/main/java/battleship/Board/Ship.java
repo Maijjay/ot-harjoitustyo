@@ -1,10 +1,10 @@
-package battleship.Board;
+package battleship.board;
 
 import java.util.ArrayList;
 
 /**
- * Ship represents a single ship that has size, coordinates and information 
- * if the ship has sunk or not.
+ * Ship represents a single ship that has size, coordinates and information if
+ * the ship has sunk or not.
  */
 public final class Ship {
 
@@ -25,14 +25,12 @@ public final class Ship {
         this.health = size;
         this.isAlive = true;
         this.setCoordinates();
-
     }
 
     /**
      * Sets all coordinates of the ship to list of arrays.
      */
     public void setCoordinates() {
-
         for (int i = 0; i < this.size; i++) {
             this.coordinates.add(new int[2]);
         }
@@ -46,7 +44,6 @@ public final class Ship {
                 this.coordinates.get(i)[0] = x;
                 this.coordinates.get(i)[1] = y + i;
             }
-
         }
     }
 
@@ -54,7 +51,6 @@ public final class Ship {
      * Decreases ships health by 1 and checks if the ship has sunk.
      */
     public void hit() {
-
         if (health > 0) {
             this.health = this.health - 1;
         }

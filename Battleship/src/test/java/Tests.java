@@ -1,8 +1,8 @@
 
-import battleship.Board.Grid;
-import battleship.Board.Ship;
-import battleship.GameState.State;
-import battleship.User.Player;
+import battleship.board.Grid;
+import battleship.board.Ship;
+import battleship.gamestate.State;
+import battleship.user.Player;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import org.junit.After;

@@ -1,4 +1,4 @@
-package battleship.Board;
+package battleship.board;
 
 import java.util.ArrayList;
 
@@ -39,12 +39,8 @@ public final class Grid {
     public boolean addShip(int x, int y, int size, boolean horizontal) {
         if (x >= 0 && x <= 9) {
             if (y >= 0 && y <= 9) {
-                for (Ship ship : ships) {
-                    for (int[] i : ship.getCoordinates()) {
-                        if (i[0] == x && i[1] == y || i[0] == y && i[1] == x) {
-                            return false;
-                        }
-                    }
+                if (!ships.stream().noneMatch((ship) -> (!ship.getCoordinates().stream().noneMatch((i) -> (i[0] == x && i[1] == y || i[0] == y && i[1] == x))))) {
+                    return false;
                 }
                 if (horizontal == true && size + x < 9) {
                     ships.add(new Ship(x, y, size, horizontal));
@@ -137,9 +133,9 @@ public final class Grid {
                         System.out.println("You hit!");
                         ship.hit();
                         this.grid[x][y] = " X ";
-                        
-                        if (ship.getIsAlive() == false){
-                            this.shipsLeft --;
+
+                        if (ship.getIsAlive() == false) {
+                            this.shipsLeft--;
                         }
                         return true;
                     }

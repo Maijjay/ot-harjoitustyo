@@ -1,10 +1,11 @@
 package battleship;
 
-import battleship.GameState.State;
+import battleship.gamestate.State;
 import java.io.FileNotFoundException;
+
 /**
-     * Main class of the game, prints starting instructions.
-     */
+ * Main class of the game, prints starting instructions.
+ */
 public class Main {
 
     public static void main(String[] args) throws FileNotFoundException {

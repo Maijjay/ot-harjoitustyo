@@ -1,6 +1,6 @@
-package battleship.User;
+package battleship.user;
 
-import battleship.Board.Grid;
+import battleship.board.Grid;
 import java.util.Scanner;
 
 /**
@@ -15,7 +15,6 @@ public class Player {
     private int shipSize;
 
     public Player() {
-
         this.scanner = new Scanner(System.in);
         this.shipSize = 1;
         this.grid = new Grid(10, 10);
@@ -82,6 +81,7 @@ public class Player {
     /**
      * Asks the player coordinates x and y and proceeds to check if the input is
      * correct.
+     *
      * @return True if hit was successful
      */
     public boolean askCoordinatesForTheHit() {
@@ -108,11 +108,12 @@ public class Player {
                 System.out.println("The x you inserted is not a number between 0 and 9. Try again");
             }
         }
-         return this.hit(x, y);
+        return this.hit(x, y);
     }
 
     /**
-     * Checks whether the square is already hit, if not the proceeds to hit the square in the grid.
+     * Checks whether the square is already hit, if not the proceeds to hit the
+     * square in the grid.
      *
      * @param x
      * @param y

@@ -1,6 +1,6 @@
-package battleship.GameState;
+package battleship.gamestate;
 
-import battleship.User.Player;
+import battleship.user.Player;
 import java.io.FileNotFoundException;
 import java.util.Random;
 
@@ -21,7 +21,6 @@ public final class State {
         this.currentPlayer = this.determineFirstTurn();
         this.firstTurn();
         this.turn();
-
     }
 
     public State(Player p1, Player p2) {
@@ -29,7 +28,7 @@ public final class State {
         this.p2 = p2;
         this.currentPlayer = this.determineFirstTurn();
     }
-    
+
     /**
      * Determines at random which player starts
      *
@@ -62,9 +61,7 @@ public final class State {
             p2.initializeShips();
             System.out.println("Player 1 set up.");
             p1.initializeShips();
-
         }
-
     }
 
     /**
@@ -76,9 +73,8 @@ public final class State {
         } else {
             this.currentPlayer = 1;
         }
-        for (int i = 0 ; i < 15 ; i++){
+        for (int i = 0; i < 15; i++) {
             System.out.println(" ");
-            
         }
         turn();
     }
@@ -101,7 +97,6 @@ public final class State {
                 }
                 newTurn = p2.askCoordinatesForTheHit();
             }
-
             this.changeTurn();
         } else {
             System.out.println("Player 2's turn");
@@ -114,11 +109,9 @@ public final class State {
                     return;
                 }
                 newTurn = p1.askCoordinatesForTheHit();
-
             }
             this.changeTurn();
         }
-
     }
 
     /**
