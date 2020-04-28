@@ -27,8 +27,7 @@ Laivanupotus on kahden pelaajan strateginen arvauspeli, missä on tarkoitus upot
   
   #### Checkstyle
    * Checkstyleraportti luodaan komennolla: ```mvn jxr:jxr checkstyle:checkstyle ```
-   
-   \n (raporttia voi tarkastella selaimella ja se löytyy: target/site/checkstyle.html)
+     (raporttia voi tarkastella selaimella ja se löytyy: target/site/checkstyle.html)
 
   
   
