@@ -23,11 +23,15 @@ Laivanupotus on kahden pelaajan strateginen arvauspeli, missä on tarkoitus upot
   #### Testien suorittaminen
    * Testien suoritus komennolla: ```mvn test```
    * Testikattavuusraportti luodaan komennolla:```mvn jacoco:report``` 
-   (raporttia voi tarkastella selaimella ja se löytyy: ```target/site/jacoco/index.html)```
+   (raporttia voi tarkastella selaimella ja se löytyy: target/site/jacoco/index.html)
   
   #### Checkstyle
    * Checkstyleraportti luodaan komennolla: ```mvn jxr:jxr checkstyle:checkstyle ```
      (raporttia voi tarkastella selaimella ja se löytyy: target/site/checkstyle.html)
+
+  #### JavaDoc
+  * JavaDoc voidaan generoida komennolla: ```mvn javadoc:javadoc```
+    (raporttia voi tarkastella selaimella ja se löytyy: target/site/apidocs/index.html)
 
   
   
