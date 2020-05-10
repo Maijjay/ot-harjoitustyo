@@ -28,24 +28,19 @@ Kun peli käynnistetään, luokka State suorittaa metodin determineFirstTurn() j
 
 (Sekvenssikaavio kuvastaa metodin turn toimintaa.)
 
-Kun pelaajat ovatlaittaneet vuoroillaan laivat ruudukkoihin on aika aloittaa itse peli. Luokka State suorittaa metodin turn(). Metodi sisältää kaksi if lausetta, jos muuttuja currentPlayer on 1 tai 2. Koska pelin aloituksessa pelaaja 1 aloitti pelin, jatketaan samalla linjalla.Mennään siis metodissa turn() ensimmäisen if -lauseen sisään. Se tulostaa, että on pelaajan 1 vuoro ja sen jälkeen ruudukon, missä näkyy pelaajan 1 mahdolliset aikaisemmat arvaukset. If lauseen sisällä on while looppi, jonka sisällä pysytään kunnes pelaaja osuu huti tai voittaa pelin.
+Kun pelaajat ovat laittaneet vuoroillaan laivat ruudukkoihin on aika aloittaa itse peli. Luokka State suorittaa metodin turn(). Metodi sisältää molempien pelaajien vuoron suorittamiseen omat if -lauseet. Oletetaan, että pelaaja 1 aloittaa pelin. Mennään siis metodissa turn() ensimmäisen if -lauseen sisään. Se tulostaa, että on pelaajan 1 vuoro ja sen jälkeen ruudukon, missä näkyy pelaajan 1 mahdolliset aikaisemmat arvaukset. If lauseen sisällä on while looppi, jonka sisällä pysytään kunnes pelaaja osuu huti tai voittaa pelin.
   
-  Seuraaksi metodi kutsuu luokan Player metodia askCoordinatesForTheHit(), tämä metodi kysyy pelaajalta koordinaatit ja kutsuu Player luokan metodia hit(int x, int y). Player luokan metodi hit(x, y) tarkastaa onko kyseiseen ruutuun jo lyöty kutsumalla Grid luokan metodia isSquareHit(x, y), jos ruutuun on jo lyöty palataan kysymään uusia koordinaatteja. 
+  Seuraaksi metodi kutsuu luokan Player metodia askCoordinatesForTheHit(), tämä metodi kysyy pelaajalta koordinaatit ja kutsuu Player luokan metodia hit(int x, int y), jos annetut koordinaatit olivat kelvolliset (kysytään uudelleen kunnes ne ovat). Player luokan metodi hit(x, y) tarkastaa onko kyseiseen ruutuun jo lyöty kutsumalla Grid luokan metodia isSquareHit(x, y), jos ruutuun on jo lyöty palataan kysymään uusia koordinaatteja. 
    
-   Jos ruutuun ei ole vielä lyöty niin metodi kutsuu Grid luokan metodia hit(x, y). Grid luokan metodi hit(x, y) käy ruudukon läpi ja katsoo onko kyseisessä kohdassa laivaa. Jos laiva löytyy peli ilmoittaa osumasta tulosteella "You hit!" ja merkitsemällä ruutuun "X". Tämän jälkeen tarkastetaan luokalta Ship onko laiva elossa kutsumalla metodia getIsAlive(), koko laivan upotessa vähennetään muuttujasta shipsLeft yksi. Jos mihinkään laivaan ei taas lyöty niin peli tulostaa "You missed!" ja laittaa ruutun "O". 
+   Jos ruutuun ei ole vielä lyöty niin metodi kutsuu Grid luokan metodia hit(x, y). Grid luokan metodi hit(x, y) käy ruudukon läpi ja katsoo onko kyseisessä kohdassa laivaa. Jos laiva löytyy, peli ilmoittaa osumasta tulosteella "You hit!" ja merkitsemällä ruutuun "X". Tämän jälkeen tarkastetaan luokalta Ship onko laiva elossa kutsumalla metodia getIsAlive(), koko laivan upotessa vähennetään muuttujasta shipsLeft yksi. Jos mihinkään laivaan ei taas lyöty niin peli tulostaa "You missed!" ja laittaa ruutun "O". 
    
-   Luokan Grid metodi palauttaa nyt sitä kutsuneelle metodille true jos pelaaja osui laivaan. Palataan siis takaisin State luokkaan asti metodiin turn(). Tässä metodissa ollaan vieläkin while loopin sisällä ja koska osuma on onnistunut pelaaja saa uuden vuoron. Ennenkuin uudet koordinaatit kysytään, niin loopin sisällä tarkastatetaan Player luokan getShipsLeft()metodilta onko kaikki laivat upotettu, missä tapauksessa pelaaja tietenkin voittaa ja peli loppuu.
+   Luokan Grid metodi hit(x, y) palauttaa nyt sitä kutsuneelle metodille true jos pelaaja osui laivaan. Näin palataan siis takaisin State luokkaan asti metodiin turn(). Tässä metodissa ollaan vieläkin while loopin sisällä ja koska osuma on onnistunut pelaaja saa uuden vuoron. Ennenkuin uudet koordinaatit kysytään, niin loopin sisällä tarkastatetaan Player luokan getShipsLeft() metodilta onko kaikki laivat upotettu, missä tapauksessa pelaaja tietenkin voittaa ja peli loppuu.
    
-   Oletetaan nyt, että pelaaja 1 arvaa koordinaatit missä ei ole vastustajan laivaa. Tällöin metodille turn() palautetaan false ja se kutsuu State luokan metodia changeTurn mikä muuttaa muuttujan currentPlayer nyt numeroksi kaksi ja kutsuu jälleen metodia turn(). Näin siirrytää pelaajan 1 vuorosta pelaajan 2 vuoroon. Tätä vuorojen vaihtoa jatkuu kunnes jompi kumpi pelaaja voittaa pelin
+   Oletetaan nyt, että pelaaja 1 arvaa koordinaatit missä ei ole vastustajan laivaa. Tällöin metodille turn() palautetaan false ja se kutsuu State luokan metodia changeTurn(), mikä muuttaa muuttujan currentPlayer nyt numeroksi kaksi ja kutsuu jälleen metodia turn(). Näin siirrytää pelaajan 1 vuorosta pelaajan 2 vuoroon. Tätä vuorojen vaihtoa jatkuu kunnes toinen pelaajista voittaa pelin.
 
 ## Käyttöliittymä
 
-Käyttöliittymänä toimii tekstikäyttöliittymä ja siitä on mahdollista asettaa ruudukkoon laivat sekä suorittaa osumia.
-
-
-
-
-
+Käyttöliittymänä toimii tekstikäyttöliittymä. Tekstikäyttöliittymä ottaa pelaajalta vastaan inputteja kuten koordinaatit laivojen asettamiseen ja laivojen lyömiseen. TKL mm. tulostaa ohjeet pelin pelaamiseen, pelaajien ruudukoita, kysyy pelaajien inputteja ja kertoo kun peli on voitettu. Käyttöliittymää olisi sinänsä syytä parantaa tai eriyttää omaan luokkaansa, koska sen toiminnallisuudet on sisälletty pelin logiikasta vastaaviin luokkiin.
 
 
 
