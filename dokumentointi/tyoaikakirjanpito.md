@@ -13,4 +13,5 @@
 * 26.04 15-19 Tein metodin joka tulostaa ruudukon aina kun laiva on lisätty, jotta on helppo nähdä missä kohtaa on jo laiva. Korjasin tilanteita, joissa pelaaja laittaa vääränlaisen syötteen ja peli kaatuu. Nyt pelin pitäisi vain ilmoittaa virheellisestä syötteestä, ilman että itse peli kaatuu kokonaan. Aloitin graafista käyttöliittymää uudelleen, mikä valitettavasti osoittautui liialliseksi haasteeksi, joten päätin että pelissä on pelkkä tekstikäyttöliittymä.
 * 27.04 18-22 Olen tänään kirjoittanut JavaDocin sekä käyttöohjeet pelille. Olen myös refaktoroinut koodia siistimmäksi ja muuttanut muuttujia privateiksi. 
 * 28.04 17-22 Kirjoitin arkkitehtuurikuvausta, testejä, korjailin checkstyle virheitä. Yritin myös erotella muutamaa metodia pienemmäksi ja parantelin tekstikäyttöliittymää.
-### Tunteja käytetty yhteensä noin 54
+* 10.04. 13-16 ja 19-20 Kirjoitin dokumentaatiota ja tein viimeisen releasen.
+### Tunteja käytetty yhteensä noin 59
