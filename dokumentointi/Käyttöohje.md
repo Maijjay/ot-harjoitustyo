@@ -4,7 +4,8 @@
 * Lataa tiedosto [Battleship.jar](https://github.com/Maijjay/ot-harjoitustyo/releases/tag/viikko6)
 
 * Ohjelma käynnistetään komennolla: 
-``` java -jar.battleship ```
+``` java -jar Battleship.jar ```
+Huom! Ohjelmaa käynnistettäessä terminaalilla, tulee olla samassa hakemistossa, missä .jar tiedosto sijaitsee. 
 
 ## Yleistä
 
