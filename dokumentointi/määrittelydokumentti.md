@@ -6,7 +6,7 @@ Kyseessä siis perinteinen laivanupotus -peli.
 * Pelissä on kaksi pelaajaa, jotka pelaavat samalta tietokoneelta.
 
 ## Suunnitellut toiminnallisuudet: 
-* Laivoja on nejä eri kokoa (ruudokolla 1x1, 2x1, 3x1 ja 4x1) 				- Tehty
+* Kullakin pelaajalla on viisi laivaa (1x1, 2x1, 3x1, 4x1 ja 5x1) 			- Tehty
 * Pelin alussa pelaajilla on mahdollisuus asettaa laivat kentälle haluamallaan tavalla 	- Tehty
 	* Laivaa ei voi sijoittaa yli ruudukon						- Tehty
 	* Laivoja voi kääntää pysty- ja vaakasuoraan 					- Tehty
@@ -23,5 +23,5 @@ Kyseessä siis perinteinen laivanupotus -peli.
 * Pelaajajille mahdollisuus valita pelilaudan koko ja laivojen määrä
 * Pelaajan mahdollisuus antaa itselleen nimi
 * Voittojen määrään perustuva highscore lista
-* Graafisen käyttöliittymän parantelu
+* Graafinen käyttöliittymä
 
